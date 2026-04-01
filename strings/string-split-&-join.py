@@ -1,2 +1,8 @@
 def split_and_join (line):
-    return "-".join(line.split())
+   
+    words = line.split(" ")
+    
+    result = "-".join(words)
+    
+    return result
+
