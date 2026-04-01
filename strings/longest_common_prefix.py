@@ -1,15 +1,14 @@
-def longestCommonPrefix(strs):
-
-    prefix= strs[0]
-
-    for s in strs[1:]:
-        while not s.startswith(prefix):
-            prefix = prefix[:-1]
-        
-    return prefix
-
-    # main part
-    if __name__ == "__main__":
-        strs= ["lakin","lake","laker"]
-    result= longestCommonPrefix(strs)
-    print(f"result is:{result}")
+class Solution:
+    def longestCommonPrefix(self, strs: List[str]) -> str:
+        if not strs: return ""
+        
+        # Sort the strings
+        strs.sort()
+        first, last = strs[0], strs[-1]
+        
+        i = 0
+        
+        while i < len(first) and i < len(last) and first[i] == last[i]:
+            i += 1
+            
+        return first[:i]
