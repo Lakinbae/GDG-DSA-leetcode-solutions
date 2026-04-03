@@ -1,6 +1,7 @@
-a,b,m=map(int, input("enter a,b,m").split())
-#result=pow(a,b,m)
-result=1
-for _ in range(b):
-    result = (result*a)%m
-print(result)
+a = int(input())
+b = int(input())
+m = int(input())
+
+print(pow(a, b))
+
+print(pow(a, b, m))
