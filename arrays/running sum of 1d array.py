@@ -1,8 +1,9 @@
 class Solution:
-    def checkIfExist(self, arr: List[int]) -> bool:
-        seen = set()
-        for x in arr:
-            if 2 * x in seen or (x % 2 == 0 and x // 2 in seen):
-                return True
-            seen.add(x)
-        return False
+    def runningSum(self, nums: List[int]) ->List[int]:
+        
+        for i in range(1,len(nums)):
+            nums[i] += nums[i-1]
+        return nums
+        nums[i] += nums[i]
+        return nums
+        
